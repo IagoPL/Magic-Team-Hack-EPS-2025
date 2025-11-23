@@ -1,0 +1,94 @@
+{
+  "daenerys": {
+    "name": "Daenerys - L'Emprenedora Ètica",
+    "description": "Fundadora d'una startup sostenible amb tres gossos. Vol un barri amb comunitat forta, negocis locals i consciència social.",
+    "weights": {
+      "density_parks": 0.3,
+      "ratio_local_businesses": 0.3,
+      "community_organizations": 0.2,
+      "dog_friendly_parks": 0.2
+    },
+    "preferences": {
+      "min_parks": 3,
+      "local_businesses_ratio": 0.7,
+      "community_focused": true
+    }
+  },
+  "cersei": {
+    "name": "Cersei - La Reina Corporativa",
+    "description": "Executiva d'alt nivell que prioritza luxe, seguretat, exclusivitat i col·legis d'elit. Vol privacitat total i màxima protecció.",
+    "weights": {
+      "median_income": 0.3,
+      "low_crime_rate": 0.3,
+      "elite_schools": 0.2,
+      "high_rent_price": 0.2
+    },
+    "preferences": {
+      "min_income": 80000,
+      "max_crime_rate": 0.1,
+      "elite_area": true
+    }
+  },
+  "bran": {
+    "name": "Bran - L'Analista Total",
+    "description": "Científic de dades que treballa 100% des de casa. Necessita accessibilitat total, silenci, millor fibra òptica i entorn tranquil.",
+    "weights": {
+      "accessibility_score": 0.25,
+      "quietness_score": 0.25,
+      "internet_coverage": 0.25,
+      "low_population_density": 0.25
+    },
+    "preferences": {
+      "accessible": true,
+      "quiet": true,
+      "good_internet": true,
+      "max_population_density": 3000
+    }
+  },
+  "jon_snow": {
+    "name": "Jon Snow - El Guardià de la Comunitat",
+    "description": "Treballador de serveis d'emergència amb sou públic. Valora barris autèntics, relació amb veïns, natura propera i funcionalitat vs luxe.",
+    "weights": {
+      "low_rent_price": 0.3,
+      "cultural_diversity": 0.2,
+      "proximity_nature": 0.25,
+      "community_density": 0.25
+    },
+    "preferences": {
+      "max_rent": 2000,
+      "authentic": true,
+      "near_nature": true
+    }
+  },
+  "arya": {
+    "name": "Arya - La Nòmada Urbana",
+    "description": "Freelance independent que prioritza anonimat, llibertat, zones denses i actives, i transport públic 24/7. Necessita estar al mig del moviment.",
+    "weights": {
+      "public_transport_coverage": 0.3,
+      "high_population_density": 0.25,
+      "large_neighborhood": 0.2,
+      "activity_centers": 0.25
+    },
+    "preferences": {
+      "public_transport": true,
+      "dense_area": true,
+      "anonymous": true
+    }
+  },
+  "tyrion": {
+    "name": "Tyrion - L'Estratega Urbà",
+    "description": "Consultor social i culte. Vol estar al centre cultural i gastronòmic. Tot accessible a peu: treball, restaurants, bars.",
+    "weights": {
+      "cultural_venues": 0.3,
+      "restaurant_density": 0.3,
+      "walkability_score": 0.25,
+      "public_transport_access": 0.15
+    },
+    "preferences": {
+      "cultural_center": true,
+      "gastronomy": true,
+      "walkable": true
+    }
+  }
+}
+

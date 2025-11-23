@@ -1,0 +1,185 @@
+{
+  "neighborhoods": [
+    {
+      "name": "Downtown LA",
+      "lat": 34.0522,
+      "lon": -118.2437,
+      "zipcode": "90013"
+    },
+    {
+      "name": "Hollywood",
+      "lat": 34.0928,
+      "lon": -118.3287,
+      "zipcode": "90028"
+    },
+    {
+      "name": "Santa Monica",
+      "lat": 34.0195,
+      "lon": -118.4912,
+      "zipcode": "90401"
+    },
+    {
+      "name": "Venice",
+      "lat": 33.9850,
+      "lon": -118.4695,
+      "zipcode": "90291"
+    },
+    {
+      "name": "West Hollywood",
+      "lat": 34.0900,
+      "lon": -118.3617,
+      "zipcode": "90069"
+    },
+    {
+      "name": "Beverly Hills",
+      "lat": 34.0736,
+      "lon": -118.4004,
+      "zipcode": "90210"
+    },
+    {
+      "name": "Silver Lake",
+      "lat": 34.0867,
+      "lon": -118.2702,
+      "zipcode": "90026"
+    },
+    {
+      "name": "Echo Park",
+      "lat": 34.0781,
+      "lon": -118.2608,
+      "zipcode": "90026"
+    },
+    {
+      "name": "Los Feliz",
+      "lat": 34.1108,
+      "lon": -118.2938,
+      "zipcode": "90027"
+    },
+    {
+      "name": "Pasadena",
+      "lat": 34.1478,
+      "lon": -118.1445,
+      "zipcode": "91101"
+    },
+    {
+      "name": "Glendale",
+      "lat": 34.1425,
+      "lon": -118.2551,
+      "zipcode": "91201"
+    },
+    {
+      "name": "Burbank",
+      "lat": 34.1808,
+      "lon": -118.3090,
+      "zipcode": "91501"
+    },
+    {
+      "name": "Culver City",
+      "lat": 34.0211,
+      "lon": -118.3965,
+      "zipcode": "90230"
+    },
+    {
+      "name": "Marina del Rey",
+      "lat": 33.9803,
+      "lon": -118.4517,
+      "zipcode": "90292"
+    },
+    {
+      "name": "Manhattan Beach",
+      "lat": 33.8847,
+      "lon": -118.4109,
+      "zipcode": "90266"
+    },
+    {
+      "name": "Redondo Beach",
+      "lat": 33.8492,
+      "lon": -118.3884,
+      "zipcode": "90277"
+    },
+    {
+      "name": "Long Beach",
+      "lat": 33.7701,
+      "lon": -118.1937,
+      "zipcode": "90802"
+    },
+    {
+      "name": "Torrance",
+      "lat": 33.8358,
+      "lon": -118.3406,
+      "zipcode": "90501"
+    },
+    {
+      "name": "Inglewood",
+      "lat": 33.9617,
+      "lon": -118.3531,
+      "zipcode": "90301"
+    },
+    {
+      "name": "Koreatown",
+      "lat": 34.0578,
+      "lon": -118.3008,
+      "zipcode": "90006"
+    },
+    {
+      "name": "Mid-City",
+      "lat": 34.0486,
+      "lon": -118.3439,
+      "zipcode": "90019"
+    },
+    {
+      "name": "Century City",
+      "lat": 34.0556,
+      "lon": -118.4170,
+      "zipcode": "90067"
+    },
+    {
+      "name": "Westwood",
+      "lat": 34.0689,
+      "lon": -118.4452,
+      "zipcode": "90024"
+    },
+    {
+      "name": "Bel Air",
+      "lat": 34.0822,
+      "lon": -118.4464,
+      "zipcode": "90077"
+    },
+    {
+      "name": "Sherman Oaks",
+      "lat": 34.1511,
+      "lon": -118.4490,
+      "zipcode": "91423"
+    },
+    {
+      "name": "Studio City",
+      "lat": 34.1431,
+      "lon": -118.3965,
+      "zipcode": "91604"
+    },
+    {
+      "name": "North Hollywood",
+      "lat": 34.1683,
+      "lon": -118.3789,
+      "zipcode": "91601"
+    },
+    {
+      "name": "Toluca Lake",
+      "lat": 34.1519,
+      "lon": -118.3487,
+      "zipcode": "91602"
+    },
+    {
+      "name": "Atwater Village",
+      "lat": 34.1144,
+      "lon": -118.2597,
+      "zipcode": "90039"
+    },
+    {
+      "name": "Griffith Park",
+      "lat": 34.1367,
+      "lon": -118.2929,
+      "zipcode": "90027"
+    }
+  ]
+}
+
