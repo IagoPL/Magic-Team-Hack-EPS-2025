@@ -1,21 +1,21 @@
-# 🏰 El Joc de Barris - HackEPS 2025
+# El Joc de Barris - HackEPS 2025
 
 Motor de recomendación de barrios de Los Angeles basado en las necesidades específicas de diferentes clientes inspirados en personajes de *Game of Thrones*.
 
-## 📋 Descripción
+## Descripción
 
 Este proyecto forma parte del reto propuesto por **restb.ai** para HackEPS 2025. Consiste en crear un sistema inteligente que recomienda barrios de Los Angeles a diferentes clientes según sus necesidades personales, estilo de vida y preferencias.
 
-## 🎯 Características
+## Características
 
-- ✅ Motor de recomendación basado en scoring ponderado
-- ✅ 6 clientes predefinidos con necesidades específicas
-- ✅ Sistema de justificación automática de recomendaciones
-- ✅ Visualización interactiva con mapas (Folium)
-- ✅ Integración con APIs: U.S. Census Bureau y OpenStreetMap
-- ✅ Gráficos comparativos de métricas
+- Motor de recomendación basado en scoring ponderado
+- 6 clientes predefinidos con necesidades específicas
+- Sistema de justificación automática de recomendaciones
+- Visualización interactiva con mapas (Folium)
+- Integración con APIs: U.S. Census Bureau y OpenStreetMap
+- Gráficos comparativos de métricas
 
-## 🚀 Instalación
+## Instalación
 
 ### Requisitos
 
@@ -44,7 +44,7 @@ streamlit run app.py
 
 La aplicación se abrirá automáticamente en tu navegador en `http://localhost:8501`
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 hackeps2025/
@@ -71,7 +71,7 @@ hackeps2025/
     └── technical_doc.md          # Documentación técnica (si existe)
 ```
 
-## 👥 Los 6 Clientes
+## Los 6 Clientes
 
 1. **Daenerys** - L'Emprenedora Ètica
    - Comunidad fuerte, negocios locales, consciencia social
@@ -91,12 +91,12 @@ hackeps2025/
 6. **Tyrion** - L'Estratega Urbà
    - Centre cultural, gastronomía, walkability
 
-## 🔧 APIs Utilizadas
+## APIs Utilizadas
 
 - **U.S. Census Bureau API**: Datos demográficos, ingresos, población
 - **Overpass API (OpenStreetMap)**: Parques, restaurantes, transporte, amenidades
 
-## 📊 Cómo Funciona
+## Cómo Funciona
 
 1. **Recopilación de datos**: Se descargan datos de las APIs y se guardan en cache local
 2. **Procesamiento**: Los datos se normalizan y se calculan métricas específicas por cliente
@@ -104,7 +104,7 @@ hackeps2025/
 4. **Recomendación**: Se ordenan los barrios por score y se muestran los top 5
 5. **Justificación**: Se generan explicaciones automáticas de por qué cada barrio es recomendado
 
-## 🎨 Uso
+## Uso
 
 1. Abre la aplicación con `streamlit run app.py`
 2. Selecciona un cliente en el sidebar
@@ -112,19 +112,19 @@ hackeps2025/
 4. Lee las justificaciones detalladas
 5. Explora los gráficos comparativos
 
-## 🔐 API Keys
+## API Keys
 
 **Nota importante**: Para usar el U.S. Census Bureau API con límites más altos, puedes obtener una API key gratuita en: https://api.census.gov/data/key_signup.html
 
 Actualiza la variable `census_api_key` en `src/data_collector.py`.
 
-## 📝 Notas
+## Notas
 
 - Los datos se cachean localmente para evitar múltiples llamadas a las APIs
 - Si no hay datos procesados, la aplicación usará datos de ejemplo
 - El sistema está preparado para agregar fácilmente un 7º cliente (cliente secreto del reto)
 
-## 🛠️ Desarrollo
+## Desarrollo
 
 Para desarrollo local:
 
@@ -138,16 +138,3 @@ python src/data_processor.py
 # Ejecutar app
 streamlit run app.py
 ```
-
-## 📄 Licencia
-
-Este proyecto ha sido desarrollado para HackEPS 2025.
-
-## 👨‍💻 Autor
-
-Desarrollado para el reto de **restb.ai** en **HackEPS 2025**.
-
----
-
-**¡Que comience el juego de barrios! 🏰**
-

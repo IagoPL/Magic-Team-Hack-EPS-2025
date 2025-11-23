@@ -89,6 +89,16 @@
       "gastronomy": true,
       "walkable": true
     }
+  },
+  "marcel_milara": {
+    "name": "Marcel Milara ",
+    "description": "Persona de alta belleza",
+    "weights": {
+      "community_organizations": 0.4,
+      "median_income": 0.2,
+      "high_rent_price": 0.2,
+      "proximity_nature": 0.2
+    },
+    "preferences": {}
   }
 }
-

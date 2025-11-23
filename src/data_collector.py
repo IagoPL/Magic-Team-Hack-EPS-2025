@@ -71,7 +71,7 @@ class DataCollector:
         
         # Guardar en cache
         save_json(census_data, get_data_path('census_data.json'))
-        print(f"✓ Datos del Census guardados en cache ({len(census_data)} barrios)")
+        print(f"Datos del Census guardados en cache ({len(census_data)} barrios)")
         
         return census_data
     
@@ -156,7 +156,7 @@ class DataCollector:
         
         # Guardar en cache
         save_json(osm_data, get_data_path('osm_data.json'))
-        print(f"✓ Datos de OSM guardados en cache ({len(osm_data)} barrios)")
+        print(f"Datos de OSM guardados en cache ({len(osm_data)} barrios)")
         
         return osm_data
     
@@ -232,7 +232,7 @@ class DataCollector:
         
         # Guardar datos combinados
         save_json(merged_data, get_data_path('merged_neighborhood_data.json'))
-        print(f"✓ Datos combinados guardados ({len(merged_data)} barrios)")
+        print(f"Datos combinados guardados ({len(merged_data)} barrios)")
         
         return merged_data
     

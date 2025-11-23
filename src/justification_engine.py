@@ -8,17 +8,15 @@ from src.utils import load_json
 
 class JustificationEngine:
     """Genera explicaciones justificadas para las recomendaciones"""
-    
+
     def __init__(self):
-        self.clients = load_json('config/clients.json')
-        
         # Templates de explicaciones en catalán
         self.templates = {
             "top_reason": "{metric_description} ({metric_value}) fa que {neighborhood} sigui ideal per a {client_name}.",
             "reason_list": "Les 3 raons principals per triar {neighborhood} són: {reasons}",
             "metric_comparison": "Amb un {metric_name} de {value}, {neighborhood} supera la mitjana d'altres barris."
         }
-        
+
         # Descripciones amigables de las métricas
         self.metric_descriptions = {
             "density_parks": "alta densitat de parcs",
@@ -46,15 +44,25 @@ class JustificationEngine:
             "walkability_score": "excel·lent walkability",
             "public_transport_access": "bon accés al transport públic"
         }
+        
+        self._load_clients()
     
+    def _load_clients(self):
+        """Carga los clientes desde el archivo de configuración"""
+        self.clients = load_json('config/clients.json')
+    
+    def reload_clients(self):
+        """Recarga los clientes (útil después de actualizarlos)"""
+        self._load_clients()
+
     def get_justification(self, neighborhood_data: Dict, client_id: str) -> Dict[str, str]:
         """
         Genera justificación para un barrio recomendado
-        
+
         Args:
             neighborhood_data: Datos del barrio con score y métricas
             client_id: ID del cliente
-        
+
         Returns:
             Diccionario con:
             - summary: Resumen breve
@@ -63,13 +71,13 @@ class JustificationEngine:
         """
         if client_id not in self.clients:
             raise ValueError(f"Cliente {client_id} no encontrado")
-        
+
         client_config = self.clients[client_id]
         client_name = client_config['name'].split(' - ')[0]  # Solo el nombre
         weights = client_config['weights']
         neighborhood_name = neighborhood_data.get('name', 'Aquest barri')
         score = neighborhood_data.get('score', 0.0)
-        
+
         # Identificar las top 3 métricas que más contribuyen al score
         metric_contributions = []
         for metric, weight in weights.items():
@@ -81,18 +89,18 @@ class JustificationEngine:
                 'weight': weight,
                 'contribution': contribution
             })
-        
+
         # Ordenar por contribución
         metric_contributions.sort(key=lambda x: x['contribution'], reverse=True)
         top_3 = metric_contributions[:3]
-        
+
         # Generar razones
         reasons = []
         for i, metric_info in enumerate(top_3):
             metric = metric_info['metric']
             metric_desc = self.metric_descriptions.get(metric, metric)
             metric_value = metric_info['value']
-            
+
             # Formatear valor para mostrar
             if isinstance(metric_value, float):
                 if metric_value < 0.01:
@@ -105,21 +113,21 @@ class JustificationEngine:
                     value_str = "alt"
             else:
                 value_str = str(metric_value)
-            
+
             reason = f"{metric_desc.capitalize()} ({value_str})"
             reasons.append(reason)
-        
+
         # Generar resumen
         summary = f"{neighborhood_name} és una excel·lent opció per a {client_name} amb un score de {score:.2%}."
-        
+
         # Generar lista de razones
         reasons_text = ", ".join(reasons[:-1]) + f" i {reasons[-1]}" if len(reasons) > 1 else reasons[0]
         top_3_text = f"Les 3 raons principals per triar {neighborhood_name} són: {reasons_text}."
-        
+
         # Generar explicación detallada
         detailed = f"{summary}\n\n{top_3_text}\n\n"
         detailed += f"Amb un score total de {score:.2%}, {neighborhood_name} satisfà les necessitats específiques de {client_name}: {client_config['description']}"
-        
+
         return {
             'summary': summary,
             'top_3_reasons': reasons,
